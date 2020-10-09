@@ -7,7 +7,9 @@ const local= path.resolve(__dirname,'..','..','tmp')
 
 
 export default {
-    directory: local,
+    local,
+    uploadsFolder: path.resolve(local,'uploads') ,
+
     storage: multer.diskStorage({
         destination: local,
         filename(request,file,callback){
